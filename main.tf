@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "terraform_state" {
-  name     = "terraform-state-file-dev"
+  name     = "terraform-state-file-dev-${random_id.bucket_suffix.hex}"
   location = "US"
   force_destroy = true
 
