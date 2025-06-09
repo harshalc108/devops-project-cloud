@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket = "terraform-state-file-dev-325d9b70"
+    prefix = "terraform/state"
+  }
+}
+
 provider "google" {
   project = "skilful-asset-462308-a0"
   region  = "us-central1"
