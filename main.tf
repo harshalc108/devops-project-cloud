@@ -5,11 +5,6 @@ terraform {
   }
 }
 
-provider "google" {
-  project = "skilful-asset-462308-a0"
-  region  = "us-central1"
-}
-
 resource "random_id" "bucket_suffix" {
   byte_length = 4
 }
