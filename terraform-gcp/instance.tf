@@ -1,7 +1,7 @@
-module "vm_instance" {
+module "sonarqube" {
   source         = "./modules/compute_instance"
-  instance_name  = "terraform-test-vm"
-  replica_count  = 1
+  instance_name  = "sonarqube-rh"
+  replica_count  = 2
   zone           = var.zone
   tags           = ["terraform", "dev"]
 

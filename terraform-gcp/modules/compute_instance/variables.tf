@@ -1,10 +1,10 @@
 variable "instance_name" {}
 variable "machine_type" {
-  default = "e2-micro"
+  default = "e2-medium"
 }
 variable "zone" {}
 variable "image" {
-  default = "debian-cloud/debian-11"
+  default = "ubuntu-os-cloud/ubuntu-2204-lts"
 }
 variable "tags" {
   type    = list(string)
