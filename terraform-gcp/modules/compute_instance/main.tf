@@ -1,5 +1,7 @@
 resource "google_compute_instance" "default" {
-  name         = var.instance_name
+  count        = var.replica_count
+  #name         = var.instance_name 
+  name         ="${var.instance_name}-${count.index}"
   machine_type = var.machine_type
   zone         = var.zone
 

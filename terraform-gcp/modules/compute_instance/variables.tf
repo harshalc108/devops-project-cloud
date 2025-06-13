@@ -10,3 +10,8 @@ variable "tags" {
   type    = list(string)
   default = []
 }
+variable "replica_count" {
+  description = "Number of VM instances to create"
+  type        = number
+  default     = 1
+}

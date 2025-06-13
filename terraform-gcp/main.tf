@@ -20,17 +20,3 @@ resource "google_storage_bucket" "terraform_state" {
 
   uniform_bucket_level_access = true
 }
-
-module "service_account" {
-  source        = "./modules/service_account"
-  account_id    = "terraform-deployer"
-  display_name  = "Terraform Deployer SA"
-}
-
-module "vm_instance" {
-  source         = "./modules/compute_instance"
-  instance_name  = "terraform-test-vm"
-  zone           = var.zone
-  tags           = ["terraform", "dev"]
-}
-
