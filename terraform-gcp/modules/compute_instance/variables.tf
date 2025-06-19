@@ -1,6 +1,7 @@
 variable "instance_name" {}
 variable "machine_type" {
   default = "e2-medium"
+  
 }
 variable "zone" {}
 variable "image" {
@@ -14,4 +15,19 @@ variable "replica_count" {
   description = "Number of VM instances to create"
   type        = number
   default     = 1
+}
+
+variable "enable_persistent_disk" {
+  type    = bool
+  default = false
+}
+
+variable "pd_type" {
+  type    = string
+  default = "pd-standard"
+}
+
+variable "pd_size_gb" {
+  type    = number
+  default = 30
 }
