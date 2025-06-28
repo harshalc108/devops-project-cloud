@@ -9,3 +9,13 @@ module "sonarqube" {
   pd_size_gb              = 25
 
 }
+
+module "pratice-linux" {
+  source         = "./modules/compute_instance"
+  instance_name  = "linux-test"
+  replica_count  = 1
+  zone           = var.zone
+  tags           = ["terraform", "dev"]
+
+}
+
