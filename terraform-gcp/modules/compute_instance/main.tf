@@ -27,9 +27,9 @@ resource "google_compute_instance" "default" {
     access_config {}
   }
 
-   metadata = {
-    startup-script = file("${path.root}/startup-scripts/ubuntu_startup.sh")
-  }
+   #metadata = {
+   #startup-script = file("${path.root}/startup-scripts/ubuntu_startup.sh")
+  #}
 
   tags = var.tags
 
