@@ -43,18 +43,7 @@ module "sonarqube" {
  #enable_persistent_disk  = true
  #pd_type                 = "pd-standard"
  #pd_size_gb              = 25
-
 }
 
-module "kubernetes" {
- source         = "./modules/compute_instance"
- instance_name  = "kubernetes-rh"
- replica_count  = 2
- zone           = var.zone
- tags           = ["terraform", "dev", "kubernetes"]
- #enable_persistent_disk  = true
- #pd_type                 = "pd-standard"
- #pd_size_gb              = 25
 
-}
 
