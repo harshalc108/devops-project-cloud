@@ -1,5 +1,5 @@
 variable "project_id" {
-  description = "skilful-asset-462308-a0"
+  description = "sdlc-dl-prod"
   type        = string
 }
 
