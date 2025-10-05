@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "terraform-state-file-prod-325d9b70"
+    bucket = "terraform-state-file-prod-301cb9d4"
     prefix = "terraform/state"
   }
 }
@@ -8,6 +8,13 @@ terraform {
 resource "random_id" "bucket_suffix" {
   byte_length = 4
 }
+
+# terraform {
+#   backend "local" {
+#     path = "terraform.tfstate"
+#   }
+# }
+
 
 resource "google_storage_bucket" "terraform_state" {
   name     = "terraform-state-file-prod-${random_id.bucket_suffix.hex}"
