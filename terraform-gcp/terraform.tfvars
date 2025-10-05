@@ -1,4 +1,4 @@
-project_id = "skilful-asset-462308-a0"      
+project_id = "sdlc-dl-prod"      
 region     = "us-central1"
 zone       = "us-central1-a"
 
